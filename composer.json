@@ -1,0 +1,49 @@
+{
+    "name": "marcoaacoliveira/laravelpagseguro",
+    "description": "A simple Laravel package to integrate PagSeguro payment gateway.",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Marco Oliveira",
+            "email": "marcoaacoliveira@markat.com.br",
+            "homepage": "https://markat.com.br"
+        }
+    ],
+    "homepage": "https://github.com/marcoaacoliveira/laravelpagseguro",
+    "keywords": ["Laravel", "Laravel Pagseguro"],
+    "require": {
+        "guzzlehttp/guzzle": "^7.0.1",
+        "illuminate/support": "~9",
+        "servo/fluidxml": "^1.21"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "~9.0",
+        "orchestra/testbench": "~7",
+        "pestphp/pest-plugin-laravel": "^1.2"
+    },
+    "autoload": {
+        "psr-4": {
+            "Marcoaacoliveira\\LaravelPagseguro\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Marcoaacoliveira\\LaravelPagseguro\\Tests\\": "tests"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Marcoaacoliveira\\LaravelPagseguro\\LaravelPagseguroServiceProvider"
+            ],
+            "aliases": {
+                "LaravelPagseguro": "Marcoaacoliveira\\LaravelPagseguro\\Facades\\LaravelPagseguro"
+            }
+        }
+    },
+    "config": {
+        "allow-plugins": {
+            "pestphp/pest-plugin": true
+        }
+    }
+}
